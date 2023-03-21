@@ -6,17 +6,17 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 
 export default function HomePage() {
-    const { products } = useSelector(state => state.userReducer.products);
+    const product = useSelector(state => state.userReducer.apple);
     const dispatch = useDispatch();
     const navigation = useNavigation()
-
+    console.log(product, '----------IPhone------');
     useEffect(() => {
         dispatch(getProduct())
     }, []);
     return (
         <View style={styles.mainView}>
 
-            <FlatList  data={products} style={styles.flatListMainView} showsVerticalScrollIndicator={false}
+            <FlatList  data={product} style={styles.flatListMainView} showsVerticalScrollIndicator={false}
                 ListEmptyComponent={
                     // <Text style={styles.emptyList}>Empty</Text>
                     <ActivityIndicator />

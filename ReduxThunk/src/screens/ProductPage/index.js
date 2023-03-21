@@ -6,10 +6,10 @@ import {  useSelector } from 'react-redux';
 
 const ProductPage = ({ route }) => {
 
-  const { products } = useSelector(state => state.userReducer.products);
+  const product = useSelector(state => state.userReducer.apple);
   const id = route.params.courseId;
   // console.log(id);
-  const selectedCourse = products.find((element) => {
+  const selectedCourse = product.find((element) => {
     return id === element.id;
   });
 

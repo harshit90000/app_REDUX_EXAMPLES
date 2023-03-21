@@ -3,7 +3,7 @@ function userReducer(state = [], action) {
     switch (action.type) {
 
         case GET_PRODUCTS:
-            return { ...state, products: action.payload };
+            return { ...state, apple: action.payload.products };
         default:
             return state;
     }
