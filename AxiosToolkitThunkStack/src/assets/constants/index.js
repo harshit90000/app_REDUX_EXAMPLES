@@ -1,0 +1,28 @@
+export const darkWhite = "#999999"
+export const textInput = "#cc99ff"
+export const lightBlue = "#0099ff"
+
+
+
+export const gray ="#808080"
+export const red ="#ff0000"
+export const green ="#00ff00"
+export const blue ="#0000ff"
+export const yellow ="#ffff00"
+export const orange ="#ffa500"
+export const purple ="#800080"
+export const pink ="#ff00ff"
+export const lightblue ="#99d6ff"
+export const lightWhite ="#f2f2f2"
+
+export const solidWhite = "#ffffff"
+export const solidBlack = "#000000"
+export const darkGrey = "#52525B"
+export const solidGrey = "#A1A1AA"
+export const lightGrey = "#D9D9D9"
+export const solidBlue = "#243D93"
+export const darkBlue = "#000D81"
+export const solidRed = "#ff0000"
+export const solidGreen = "#009900"
+export const solidYellow = "#ffcc00"
+export const lightOrange = "#ff944d"

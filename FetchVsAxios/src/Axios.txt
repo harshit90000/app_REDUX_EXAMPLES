@@ -1,0 +1,109 @@
+AXIOS 
+
+npm install axios
+
+Axios is a javascript library for making HTTP Request from Noe.js or XMLHttpREQUESTs OR Browser.
+It's Based on Promise API.
+
+SYNTAX:
+
+axios.get(url)
+	.then(response => console.log(response))
+	.catch((error) => console.log(error))
+
+AXIOS CONFIG OBJECT:
+
+BASEURL
+PARAMS
+HEADERS
+AUTH
+RESPONSETYPE
+
+AXIOS RESPONSE OBJECT:
+
+DATA		-	Actually Response Body
+STATUS 		-	HTTP Status of the call like 202 or 404
+STATUSTEXT	-	HTTP Status as a text message 
+HEADERS		-	The same as in Request
+CONFIG		-	Request Configuration
+REQUEST 	-	XMLHTTPREQUEST OBJECT
+
+
+axios.POST({
+	'/url',
+	{name: 'Harry', age: 22},
+	{ options }
+})
+
+OR
+
+const config = {
+	url: 'http//api.com',
+	method: 'POST',
+	header: {
+		'Content-Type': 'application/json'
+	},
+	data: {name: 'Harry', age: 22}
+}
+axios(config);
+
+
+In axios we pass data in  the request OR Get data from the response and it's automatically stringified. 
+(No Other options Required)
+
+
+axios.get(url)
+	.then(response => console.log(response))
+	.catch((error) => {f
+		if(error.response) {
+			// when response status code is out of 2xx range 
+			console.log(error.response.data)
+			console.log(error.response.status)
+			console.log(error.response.headers)
+		}
+		else if (error.request) {
+			// when no response was recieved after request was made
+			console.log(error.request)
+		}
+		else {
+			//Error
+			console.log(error.message)
+		}
+	})
+
+Axios HTTP Interception is the one of the key features of this ibrarry, that's why we don't have to create additional code to use it. 
+
+ //	request interceptor
+ axios.interceptors.request.use((config) => {
+ 	console.log('Request sent')
+ })
+
+ //	response interceptor
+ axios.interceptors.request.use((response) => {
+ 	// do an operation on response
+ 	return response
+ })
+
+axios.get(url)
+	.then(response => console.log(response))
+	.catch((error) => console.log(error))
+
+
+
+DIFFERENCE BETWEEN FETCH & AXIOS :
+
+fetch's body = Axios's data
+fetch's body has to be stringified, axios's data contqins the object.
+fetch has no url in request objbject, axios has url in request object.
+fetch request function includes the url as parameter , axios request function doesn't includes url as parameter.
+
+
+
+
+
+
+
+
+
+
+
