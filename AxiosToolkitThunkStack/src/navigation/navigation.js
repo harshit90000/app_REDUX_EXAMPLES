@@ -27,7 +27,7 @@ const Navigation = () => {
                 <stack.Screen name="ProductList" component={ProductList} options={{ headerShown: "true", title: "Product List" }} />
                 <stack.Screen name="ProductPage" component={ProductPage} options={{ headerShown: "true", title: "Product Page" }} />
             </stack.Navigator> */}
-
+        
             <tab.Navigator screenOptions= {{
                     headerStyle: { backgroundColor: "dodgerblue" },
                     headerTintColor: "white",
@@ -46,6 +46,59 @@ const Navigation = () => {
     );
 }
 
+// const Stack = () => {
+//     const tab = createBottomTabNavigator()
+//     return (
+//         <tab.Navigator screenOptions={{
+//             headerStyle: { backgroundColor: "dodgerblue" },
+//             headerTintColor: "white",
+//         }}>
+//             <tab.Screen name="ProductList"
+//                 component={ProductList}
+//                 options={{ headerShown: true, title: "Product List" }}
+//             />
+//             <tab.Screen name="ImageZooming"
+//                 component={ImageZooming}
+//                 options={{ headerShown: true, title: "Image Zooming" }} />
+//         </tab.Navigator>
+//     );
+// }
+// const Navigation = () => {
+//     const stack = createNativeStackNavigator()
+//     return (
+//         <NavigationContainer>
+//             <stack.Navigator screenOptions=
+//                 {{
+//                     headerStyle: { backgroundColor: "dodgerblue" },
+//                     headerTintColor: "white",
+//                     headerShown: "false",
+//                     gestureEnabled: true,
+//                     gestureDirection: "vertical",
+//                     presentation: "card"
+//                 }}
+//                 headerMode="navigation"
+//                 animation="fade">
+//                 <stack.Screen name="Stack" component={Stack} options={{ headerShown: false, title: "Stack" }} />
+//                 <stack.Screen name="ProductPage" component={ProductPage} options={{ headerShown: "true", title: "Product Page" }} />
+//             </stack.Navigator>
+
+//             {/* <tab.Navigator screenOptions= {{
+//                     headerStyle: { backgroundColor: "dodgerblue" },
+//                     headerTintColor: "white",
+//                 }}>
+//                 <tab.Screen name="Stack"
+//                     component={Stack}
+//                     options={{ headerShown: false, title: "Products" }}
+//                 />
+//                 <tab.Screen name="ImageZooming"
+//                     component={ImageZooming}
+//                     options={{ headerShown: true, title: "Image Zooming"  }} />
+                    
+//             </tab.Navigator> */}
+
+//         </NavigationContainer>
+//     );
+// }
 
 
 export default Navigation;

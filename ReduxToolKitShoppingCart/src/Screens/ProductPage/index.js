@@ -32,7 +32,7 @@ const ProductPage = ({ route }) => {
         </View>
         <View style={styles.textDirectionView}>
           <Text style={styles.itemHeadingText}>Rate :</Text>
-          {/* <Text style={styles.itemDetailsText}> {selectedCourse.rating.rate}</Text> */}
+          <Text style={styles.itemDetailsText}> {selectedCourse.rating}</Text>
         </View>
         <View style={styles.textDirectionView}>
           <Text style={styles.itemHeadingText}>Description :</Text>
